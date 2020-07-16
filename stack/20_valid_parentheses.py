@@ -1,3 +1,5 @@
+# time complexity: O(n), access each element once in the loop
+# space complexity: O(n), in the worst case, no closing bracket, push all the opening brackets to the stack, e.g. {[{[(((((((
 class Solution(object):
     def isValid(self, s):
         """
@@ -6,9 +8,10 @@ class Solution(object):
         """
 
         stack = [ ]
-        
+        # hash map
         mapping = {")":"(", "}":"{", "]":"["}
         
+        # for each element in s
         for char in s:
             
             # if char is an closing bracket
