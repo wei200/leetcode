@@ -4,7 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        
+       # subset questions
+	# O(2^N)
+	# O(2^N) 
         if nums is None:
             return None
         
