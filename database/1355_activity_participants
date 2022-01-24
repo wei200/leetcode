@@ -1,8 +1,0 @@
-# Write your MySQL query statement below
-
-SELECT
-    activity AS ACTIVITY
-FROM Friends
-GROUP BY activity
-HAVING count(activity) > (SELECT count(activity) FROM Friends GROUP BY activity ORDER BY COUNT(activity) ASC LIMIT 1) AND
-COUNT(activity) < (SELECT COUNT(activity) FROM Friends GROUP BY activity ORDER BY COUNT(activity) DESC LIMIT 1)

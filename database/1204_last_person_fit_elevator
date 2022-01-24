@@ -1,7 +1,0 @@
-SELECT
-    LOWER(TRIM(product_name)) AS PRODUCT_NAME,
-    DATE_FORMAT(sale_date,"%Y-%m") AS SALE_DATE,
-    COUNT(*) AS TOTAL
-FROM Sales
-GROUP BY LOWER(TRIM(product_name)), DATE_FORMAT(sale_date,"%Y-%m")
-ORDER BY LOWER(TRIM(product_name)) ASC, DATE_FORMAT(sale_date,"%Y-%m") ASC
